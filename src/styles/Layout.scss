@@ -1,0 +1,8 @@
+.home-page {
+  display: flex;
+  padding: 20px;
+  font-size: 14px;
+  @media all and (max-width: $lg) {
+    display: block;
+  }
+}

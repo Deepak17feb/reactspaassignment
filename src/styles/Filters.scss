@@ -1,0 +1,155 @@
+.open-filter {
+  background-color: $color-text-pagination-inactive;
+  color: $color-text-pagination-action;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  display: none;
+  svg {
+    font-size: 24px;
+  }
+  @media all and (max-width: $lg) {
+    &.true {
+      display: none;
+    }
+    &.false {
+      display: flex;
+    }
+  }
+}
+.filter-container {
+  width: $filter-width;
+  height: $filter-height;
+  gap: $filter-gap;
+  padding: 12px;
+  margin-right: 40px;
+  border-radius: $border-radius 0 0 0;
+  box-shadow: 0px 0px 2px 0px #171a1f1f;
+  @media all and (max-width: $lg) {
+    position: fixed;
+    z-index: 1;
+    background: white;
+    width: 100%;
+    height: 100%;
+  }
+  @media all and (max-width: $lg) {
+    &.false {
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: all 0.3s ease;
+    }
+    &.true {
+      transform: scale(1, 1);
+      transform-origin: top;
+      transition: all 0.3s ease;
+      margin: -20px;
+      padding: 20px;
+    }
+  }
+  .filter-group {
+    &:first-child {
+      .filter-heading {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .filter-heading {
+    width: $filter-heading-width;
+    height: $filter-heading-height;
+    top: $filter-heading-top;
+    left: $filter-heading-left;
+    padding: $filter-heading-padding;
+    gap: 0;
+    border-radius: $filter-heading-border-radius;
+    background-color: $color-text-filter-heading;
+    margin: 24px 0 8px;
+    @media all and (max-width: $lg) {
+      width: 100%;
+    }
+  }
+
+  .filter {
+    &-label {
+      color: $color-text-category-label;
+      width: 100%;
+      display: block;
+      position: relative;
+      padding-left: 26px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    &-input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    &-checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 16px;
+      width: 16px;
+      border: 2px solid #eee;
+    }
+    &-input:checked ~ .filter-checkmark {
+      background-color: $color-background-checkbox;
+    }
+    &-input:checked ~ .filter-checkmark:after {
+      display: block;
+    }
+    &-close-btn {
+      font-size: 30px;
+      text-align: center;
+      margin: 30px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: none;
+      @media all and (max-width: $lg) {
+        &.true {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        &.false {
+          display: none;
+        }
+      }
+    }
+    &-close-text {
+      font-size: 16px;
+    }
+  }
+
+  .filter-checkmark:after {
+    left: 4px;
+    top: 1px;
+    width: 2px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .filter-checkbox {
+    background-color: $color-background-checkbox;
+    &::after {
+      content: "✔";
+      color: $color-tick-checkbox;
+    }
+  }
+  .filter-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+}

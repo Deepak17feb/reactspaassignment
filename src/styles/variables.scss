@@ -1,0 +1,35 @@
+// Colors
+$color-text-heading: #171a1f;
+$color-text-date-source: #565d6d;
+$color-text-category-label: #171a1f;
+$color-background-checkbox: #5113d7;
+$color-tick-checkbox: #ffffff;
+$color-background-pagination-active: #1e2128;
+$color-background-pagination-inactive: transparent;
+$color-text-pagination-action: #ffffff;
+$color-text-pagination-inactive: #171a1f;
+$color-text-filter-heading: #f8f9fa;
+
+// Fonts
+$font-family: "Inter", sans-serif;
+
+// Common properties
+$border-radius: 6px;
+$opacity: 0;
+
+// Filter section
+$filter-width: 280px;
+$filter-height: 614px;
+$filter-gap: 0px;
+
+$filter-heading-width: 256px;
+$filter-heading-height: 36px;
+$filter-heading-top: 16px;
+$filter-heading-left: 12px;
+$filter-heading-padding: 6px 12px 6px 12px;
+$filter-heading-border-radius: 4px 0px 0px 0px;
+
+$default-width: 100%;
+
+// media query
+$lg: 1000px;
