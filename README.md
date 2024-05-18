@@ -5,6 +5,8 @@
 
 
 ## clone respository from bitbucket
+### git clone https://bitbucket.org/deepakpahwabitbucket/reactspaassignment.git
+
 ## Navigate to the root directory of the project:
 
 
