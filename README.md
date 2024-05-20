@@ -1,7 +1,7 @@
 # How to run the application
 
 
-## Prerequisites: Install Node.js on your local environment
+## Prerequisites: Install Node.js >=18 on your local environment
 
 
 ## clone respository from bitbucket
